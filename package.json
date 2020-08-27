@@ -7,6 +7,7 @@
     "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^5.0.2",
     "babel-plugin-react-docgen-typescript": "^1.4.2",
     "rollup": "^2.26.6",
     "rollup-plugin-typescript2": "^0.27.2",

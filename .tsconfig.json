@@ -1,4 +1,8 @@
 {
-  "compilerOptions": { "module": "ES2020", "declaration": true },
+  "compilerOptions": {
+    "module": "ES2020",
+    "declaration": true,
+    "jsx": "react"
+  },
   "include": ["./Foo.tsx"]
 }
