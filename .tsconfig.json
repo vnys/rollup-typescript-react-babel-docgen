@@ -1,0 +1,4 @@
+{
+  "compilerOptions": { "module": "ES2020", "declaration": true },
+  "include": ["./Foo.tsx"]
+}
