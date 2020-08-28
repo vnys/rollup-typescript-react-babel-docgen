@@ -20,6 +20,7 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "bundle": "rollup -c"
+    "bundle": "rollup -c",
+    "bundle:watch": "rollup -c -w"
   }
 }

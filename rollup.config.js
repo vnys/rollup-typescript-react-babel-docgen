@@ -1,27 +1,26 @@
-import resolve from '@rollup/plugin-node-resolve';
-import babel from '@rollup/plugin-babel';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
+import resolve from '@rollup/plugin-node-resolve'
+import babel from '@rollup/plugin-babel'
+import commonjs from '@rollup/plugin-commonjs'
+import typescript from '@rollup/plugin-typescript'
 
 export default {
-  input: 'Foo.tsx',
+  input: './src/Foo.tsx',
   output: {
-    file: 'bundle.es.js',
+    dir: './dist',
     format: 'esm',
   },
   plugins: [
     resolve(),
-    typescript(),
+    typescript({
+      declaration: true,
+      declarationDir: './dist',
+    }),
     babel({
       babelHelpers: 'bundled',
-      presets: [
-        '@babel/preset-env',
-        '@babel/preset-react',
-        // '@babel/preset-typescript',
-      ],
+      presets: ['@babel/preset-env', '@babel/preset-react'],
       extensions: ['.tsx'],
       plugins: ['babel-plugin-react-docgen-typescript'],
     }),
-    commonjs(),
+    commonjs(), // must be present
   ],
-};
+}
